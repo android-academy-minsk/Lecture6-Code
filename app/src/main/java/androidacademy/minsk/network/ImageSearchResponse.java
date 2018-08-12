@@ -1,4 +1,4 @@
-package com.androidacademy.persistenceshowcase.Network;
+package androidacademy.minsk.network;
 
 import java.util.List;
 

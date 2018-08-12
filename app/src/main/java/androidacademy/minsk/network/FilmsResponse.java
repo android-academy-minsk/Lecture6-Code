@@ -1,6 +1,6 @@
-package com.androidacademy.persistenceshowcase.Network;
+package androidacademy.minsk.network;
 
-import com.androidacademy.persistenceshowcase.Models.Film;
+import androidacademy.minsk.models.Film;
 
 import java.util.List;
 
