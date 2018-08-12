@@ -1,10 +1,10 @@
-package com.androidacademy.persistenceshowcase.Models;
-
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
+package androidacademy.minsk.models;
 
 import com.google.gson.annotations.SerializedName;
+
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity
 public class Film {

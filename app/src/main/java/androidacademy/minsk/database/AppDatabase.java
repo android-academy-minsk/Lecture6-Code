@@ -1,12 +1,12 @@
-package com.androidacademy.persistenceshowcase.Database;
+package androidacademy.minsk.database;
 
-import android.arch.persistence.room.Database;
-import android.arch.persistence.room.Room;
-import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import com.androidacademy.persistenceshowcase.Models.Film;
-import com.androidacademy.persistenceshowcase.Network.NetworkManager;
+import androidacademy.minsk.models.Film;
+
+import androidx.room.Database;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
 
 @Database(entities = {Film.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
