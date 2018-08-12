@@ -1,17 +1,18 @@
-package com.androidacademy.persistenceshowcase;
+package androidacademy.minsk;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.androidacademy.persistenceshowcase.Models.Film;
-import com.bumptech.glide.Glide;
+import androidacademy.minsk.models.Film;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private List<Film> mDataset;
@@ -34,7 +35,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         Film film = mDataset.get(position);
         holder.title.setText(film.getTitle());
         holder.description.setText(film.getDescription().replaceAll("[\n]", ""));
-        Glide.with(context).load(film.getUrl()).into(holder.imageView);
+        Picasso.get().load(film.getUrl()).into(holder.imageView);
     }
 
     @Override

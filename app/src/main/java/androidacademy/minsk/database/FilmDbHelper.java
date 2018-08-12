@@ -1,10 +1,10 @@
-package com.androidacademy.persistenceshowcase.Database;
+package androidacademy.minsk.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.androidacademy.persistenceshowcase.Database.FilmContract.FilmEntry;
+import androidacademy.minsk.database.FilmContract.FilmEntry;
 
 
 public class FilmDbHelper extends SQLiteOpenHelper {

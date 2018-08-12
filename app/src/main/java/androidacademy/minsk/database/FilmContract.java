@@ -1,4 +1,4 @@
-package com.androidacademy.persistenceshowcase.Database;
+package androidacademy.minsk.database;
 
 import android.provider.BaseColumns;
 
