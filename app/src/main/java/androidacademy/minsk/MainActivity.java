@@ -1,18 +1,19 @@
-package com.androidacademy.persistenceshowcase;
+package androidacademy.minsk;
 
 import android.os.Bundle;
-import android.support.annotation.MainThread;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
-import com.androidacademy.persistenceshowcase.Models.Film;
-import com.androidacademy.persistenceshowcase.Network.NetworkManager;
-import com.androidacademy.persistenceshowcase.Network.StarWarsDataCallback;
+import androidacademy.minsk.models.Film;
+import androidacademy.minsk.network.NetworkManager;
+import androidacademy.minsk.network.StarWarsDataCallback;
 
 import java.util.List;
+
+import androidx.annotation.MainThread;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity implements StarWarsDataCallback {
 

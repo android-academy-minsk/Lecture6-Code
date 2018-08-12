@@ -1,4 +1,4 @@
-package com.androidacademy.persistenceshowcase.Models;
+package androidacademy.minsk.models;
 
 import com.google.gson.annotations.SerializedName;
 

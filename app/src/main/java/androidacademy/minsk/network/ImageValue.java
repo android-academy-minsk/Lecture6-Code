@@ -1,4 +1,4 @@
-package com.androidacademy.persistenceshowcase.Network;
+package androidacademy.minsk.network;
 
 public class ImageValue {
     private String contentUrl;
