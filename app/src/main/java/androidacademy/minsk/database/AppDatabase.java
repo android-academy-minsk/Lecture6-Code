@@ -10,7 +10,7 @@ import androidx.room.RoomDatabase;
 
 @Database(entities = {Film.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
-    private static AppDatabase singleton;
+    private static volatile AppDatabase singleton;
     private static final String DATABASE_NAME = "FilmDb.db";
 
     public abstract FilmDao filmDao();
