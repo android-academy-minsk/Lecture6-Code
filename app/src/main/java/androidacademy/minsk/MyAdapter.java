@@ -15,24 +15,24 @@ import java.util.List;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private List<Film> mDataset;
+    private List<Film> dataset;
     private Context context;
 
-    public MyAdapter(List<Film> myDataset, Context context) {
-        mDataset = myDataset;
+    public MyAdapter(List<Film> dataset, Context context) {
+        this.dataset = dataset;
         this.context = context;
     }
 
     // Create new views (invoked by the layout manager)
     @Override
     public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Film film = mDataset.get(position);
+        Film film = dataset.get(position);
         holder.title.setText(film.getTitle());
         holder.description.setText(film.getDescription().replaceAll("[\n]", ""));
         Picasso.get().load(film.getUrl()).into(holder.imageView);
@@ -40,7 +40,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return mDataset.size();
+        return dataset.size();
     }
 
 

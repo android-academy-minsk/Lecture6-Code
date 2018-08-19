@@ -28,9 +28,7 @@ public class MainActivity extends BaseActivity implements StarWarsDataCallback {
     private void restoreData() {
         AppDatabase db = AppDatabase.getAppDatabase(this);
         List<Film> filmList = db.filmDao().getAll();
-        if (filmList != null && filmList.size() > 0) {
-            updateUI(filmList);
-        }
+        updateUI(filmList);
     }
 
     @Override
