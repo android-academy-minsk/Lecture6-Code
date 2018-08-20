@@ -1,8 +1,23 @@
 package androidacademy.minsk.models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
-public class Film {
+public class Film implements Parcelable {
+
+    public static final Creator<Film> CREATOR = new Creator<Film>() {
+        @Override
+        public Film createFromParcel(Parcel source) {
+            return new Film(source);
+        }
+
+        @Override
+        public Film[] newArray(int size) {
+            return new Film[size];
+        }
+    };
 
     @SerializedName("title")
     private String title;
@@ -16,6 +31,12 @@ public class Film {
         this.title = title;
         this.description = description;
         this.url = url;
+    }
+
+    Film(Parcel source) {
+        title = source.readString();
+        description = source.readString();
+        url = source.readString();
     }
 
     public String getTitle() {
@@ -40,5 +61,17 @@ public class Film {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(title);
+        dest.writeString(description);
+        dest.writeString(url);
     }
 }
